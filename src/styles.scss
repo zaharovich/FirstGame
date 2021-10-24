@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "KoskoBold-Bold";
+  color: #fff;
+}
+
+@font-face {
+  font-family: "KoskoBold-Bold";
+  src: url("assets/fonts/KoskoBold-Bold.ttf");
+}
+
+@font-face {
+  font-family: "KoskoBold-Regular";
+  src: url("assets/fonts/KoskoRegular-Regular.ttf");
+}
+
+body {
+  overflow: hidden;
+}

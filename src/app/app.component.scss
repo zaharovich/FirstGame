@@ -1,0 +1,131 @@
+
+.global_block {
+  width: 100%;
+  height: 100vh;
+  background: url("../assets/img/fon.jpg") center;
+  background-size: cover;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url("../assets/img/logo.png") no-repeat center;
+    background-size: contain;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.1;
+  }
+
+  .top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 51px 50px 0;
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 10px;
+    }
+    p{
+      font-size: 25px;
+    }
+  }
+
+  .players {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .computer, .player {
+      width: 50%;
+      height: 100%;
+      position: relative;
+
+      .default {
+        position: absolute;
+        width: 680px;
+        height: 680px;
+        background: url("../assets/img/rock.png") no-repeat center;
+        background-size: cover;
+        top: 50%;
+        left: -100px;
+        transform: translateY(-50%)  rotate(5deg);
+
+
+        &.shake{
+          animation-name: shake;
+          animation-duration: 0.5s;
+          animation-iteration-count: 3;
+          animation-timing-function: ease-in-out;
+
+        }
+        @keyframes shake {
+          0% {
+            transform: translateY(-50%) rotate(3deg);
+          }
+          50% {
+            transform: translateY(-60%) rotate(-2deg);
+          }
+          100% {
+            transform: translateY(-50%) rotate(3deg);
+          }
+        }
+      }
+    }
+
+    .player {
+      transform: rotateY(
+          180deg);
+    }
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: unset !important;
+
+    div {
+      width: 100px;
+      height: 100px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &.active {
+        box-shadow: 0 0 36px #2aff00d9;
+        transform: scale(1.2);
+      }
+    }
+    .paper-variant {
+      background: url("../assets/img/paper-icon.png") no-repeat center;
+      background-size: cover;
+    }
+    .rock-variant {
+      background: url("../assets/img/rock-icon.png") no-repeat center;
+      background-size: cover;
+    }
+    .scissors-variant {
+      background: url("../assets/img/scissors-icon.png") no-repeat center;
+      background-size: cover;
+    }
+  }
+}
