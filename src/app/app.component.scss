@@ -55,7 +55,7 @@
         width: 680px;
         height: 680px;
         background: url("../assets/img/rock.png") no-repeat center;
-        background-size: cover;
+        background-size: cover !important;
         top: 50%;
         left: -100px;
         transform: translateY(-50%)  rotate(5deg);
@@ -79,6 +79,18 @@
             transform: translateY(-50%) rotate(3deg);
           }
         }
+      }
+
+      .scissors {
+        background: url("../assets/img/scissors.png") no-repeat center;
+      }
+
+      .rock {
+        background: url("../assets/img/rock.png") no-repeat center;
+      }
+
+      .paper {
+        background: url("../assets/img/paper.png") no-repeat center;
       }
     }
 

@@ -3,26 +3,28 @@
   <img class="logo" src="../assets/img/logotop.png">
 
   <div class="left">
-    <p>Очки противника: <span>0</span></p>
+    <p>{{oppPoints}} <span>{{countVrag}}</span></p>
   </div>
   <div class="right">
-    <p>Ваши очки: <span>0</span></p>
+    <p>{{myPoints}} <span>{{countPlayer}}</span></p>
   </div>
 </div>
   <div class="players">
     <div class="computer">
-      <div class="default shake"></div>
+      <div [ngClass]="player"></div>
     </div>
     <div class="player">
-      <div class="default shake"></div>
+      <div [ngClass]="default"></div>
     </div>
   </div>
 
   <div class="menu">
-    <div class="paper-variant" ></div>
-    <div class="rock-variant"></div>
-    <div class="scissors-variant"></div>
-  </div>
+    <div (click)="hodPaper(1)" class="paper-variant"  ></div>
+    <div (click)="hodRock(0)" class="rock-variant"></div>
+    <div (click)="hodScissors(2)" class="scissors-variant"></div>
+</div>
+
+
 
 </div>
 
