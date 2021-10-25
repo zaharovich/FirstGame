@@ -1,4 +1,4 @@
-
+https://stackblitz.com/github/zaharovich/FirstGame - Не отображаются фоны с scss (Говорил об этом в лс)
 
 # Для чего нужен package.json
 
