@@ -41,15 +41,40 @@ export class AppComponent {
       if (this.resultVrag === 2 ){
         this.player = 'default scissors';
       }
-      if( this.resultVrag > this.resultPlayer) {
-        this.countVrag ++;
-      }
-      if( this.resultVrag < this.resultPlayer) {
-        this.countPlayer ++;
-      }
-    },1500)
-  }
 
+      switch (this.resultPlayer) {
+        case 0:
+          if (this.resultVrag === 1) {
+            this.countVrag ++;
+          }
+          if (this.resultVrag === 2){
+            this.countPlayer ++;
+          }
+          break;
+
+        case 1:
+          if (this.resultVrag === 0) {
+            this.countPlayer ++;
+          }
+          if (this.resultVrag === 2){
+            this.countVrag ++;
+          }
+          break;
+
+        case 2:
+          if (this.resultVrag === 0) {
+            this.countVrag ++;
+          }
+          if (this.resultVrag === 1){
+            this.countPlayer ++;
+          }
+          break;
+      }
+
+      console.log(this.resultVrag,  this.resultPlayer);
+    },1500)
+
+  }
 
   hodPaper = (value: number) => {
     this.resultPlayer = value;
