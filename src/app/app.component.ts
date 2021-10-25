@@ -8,13 +8,19 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'game';
   oppPoints = 'Очки противника:';
-  myPoints = 'Ваши очки:';
+  myName = 'Ваши очки:';
   default = 'default';
   player = 'default';
   countVrag = 0;
   countPlayer = 0;
   resultPlayer = 0;
   resultVrag = 0;
+  show = true;
+
+  handleChange (val: any) {
+    this.myName = val.myName;
+    this.show = val.show;
+  }
 
   random = (max: number) => {
     return Math.floor(Math.random() * max);
