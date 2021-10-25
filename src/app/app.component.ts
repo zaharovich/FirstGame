@@ -35,15 +35,12 @@ export class AppComponent {
       if (this.resultVrag === 0 ){
         this.player = 'default rock';
       }
-
       if (this.resultVrag === 1 ){
         this.player = 'default paper';
       }
-
       if (this.resultVrag === 2 ){
         this.player = 'default scissors';
       }
-
       if( this.resultVrag > this.resultPlayer) {
         this.countVrag ++;
       }
