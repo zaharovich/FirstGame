@@ -1,27 +1,20 @@
-# Game
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
 
-## Development server
+# Для чего нужен package.json
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Думустим заливаем проект в git, но папка node_modules в игноре. Я приехал к бабушке хочу поработать :) но я не знаю какие пакеты в node я исользовал. Вот в этом и поможет package.json
 
-## Code scaffolding
+# Что такое npm и как мы его используем?
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Это менеджер пакетов в экосистеме Node.js. Используется для установки и управления модулями в проектах, а также для установки инструментов CLI и запуска сценариев. И так же npm отслеживает установленные в проекте модули с помощью файла package.json
 
-## Build
+# Какова цель папки с ресурсами, main.ts, angular.json, index.html
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+index.html - самая основная страница с струкутруой на которой отображаются все компоненты
+main.ts - точка входа в нашу апку, компилирует веб-приложение и загружает AppModule для запуска в браузере. Он начинается с импорта базового модуля.
+angular.json - этот файл содержит всю информацию о проекте.
 
-## Running unit tests
+# Приведите пример умных и тупых компонентов
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+smart компонент - это компонент который содердит в себе логику (умный компонент)
+dumb компонент - это компонент который выполняет визуальную функцию или ссылается на smart компонент
